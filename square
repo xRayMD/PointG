@@ -1,0 +1,22 @@
+def estimate_throat_depth(height):
+    # A rough estimation of throat depth based on height
+    # This is purely hypothetical and not based on medical data
+    depth_ratio = 0.08  # Assume throat depth is roughly 8% of height
+    throat_depth = height * depth_ratio
+    return throat_depth
+
+def main():
+    try:
+        height = float(input("Enter your height in centimeters: "))
+        if height <= 0:
+            print("Height must be a positive number.")
+            return
+        
+        throat_depth = estimate_throat_depth(height)
+        print(f"Estimated throat depth: {throat_depth:.2f} cm")
+    
+    except ValueError:
+        print("Please enter a valid number for height.")
+
+if __name__ == "__main__":
+    main()
